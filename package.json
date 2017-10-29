@@ -5,7 +5,17 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "tslint -c tslint.json Tasks\\**\\*.ts"
+    "lint": "tslint -c tslint.json Tasks\\**\\*.ts",
+    "clean": "rimraf dist && npm run clean-js && npm run clean-map",
+    "clean-js": "rimraf Tasks/**/*.js",
+    "clean-map": "rimraf Tasks/**/*.map",
+    "compile": "npm run lint && tsc --project ./Tasks",
+    "move-npm": "mkdirp dist/Tasks/CustomTask && copyfiles \"./package.json\" dist/Tasks/CustomTask",
+    "move-task": "copyfiles \"./Tasks/CustomTask/**/!(*.ts)\" dist",
+    "restore-prod": "pushd \"dist/Tasks/CustomTask\" && npm install --only=production && popd",
+    "build": "npm run move-npm && npm run restore-prod && npm run lint && npm run compile && npm run move-task",
+    "build-clean": "npm run clean && npm run build",
+    "publish-local": "tfx build tasks upload --task-path ./dist/Tasks/CustomTask"
   },
   "repository": {
     "type": "git",
@@ -27,6 +37,8 @@
   "devDependencies": {
     "@types/node": "^8.0.47",
     "@types/q": "^1.0.6",
+    "copyfiles": "^1.2.0",
+    "rimraf": "^2.6.2",
     "tslint": "^5.8.0",
     "tslint-eslint-rules": "^4.1.1",
     "tslint-microsoft-contrib": "^5.0.1",
