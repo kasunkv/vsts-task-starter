@@ -37,7 +37,7 @@ Before you start working on the project, there are few things you need to change
 * **description** :  Short description for the VSTS Task
 * **contributions:id** : Identifier of the VSTS task
 
-The [Manifest Reference Documentation](https://docs.microsoft.com/en-us/vsts/extend/develop/manifest) include the full list of configuration options and their description you can refer to change the `vss-extension.json` file.
+The [Manifest Reference](https://docs.microsoft.com/en-us/vsts/extend/develop/manifest) include the full list of configuration options and their description you can refer to change the `vss-extension.json` file.
 
 ### package.json
 
@@ -54,7 +54,7 @@ The [Manifest Reference Documentation](https://docs.microsoft.com/en-us/vsts/ext
 * **description** : Short description for the task.
 * **author** : Name of the VSTS task author
 
-The [Build Task Reference Documentation](https://docs.microsoft.com/en-us/vsts/extend/develop/build-task-schema) include the full schema with the available options and their description you can refer to change the `task.json` file.
+The [Build Task Reference](https://docs.microsoft.com/en-us/vsts/extend/develop/build-task-schema) include the full schema with the available options and their description you can refer to change the `task.json` file.
 
 ## Marketplace Graphics
 There are 3 types of graphics used in the VSTS Task. Look at the _Project Structure_ figure to see the location of these files
@@ -67,28 +67,32 @@ There are 3 types of graphics used in the VSTS Task. Look at the _Project Struct
 ## Starting Development
 ### Install the npm packages
 The project uses `vsts-task-lib` npm package and few development time dependencies.
-```
+
+```bash
 # Install dependencies
 npm install
 ```
 
 ### Running Code Analysis
 The project is written in `TypeScript`. It uses `TSLint` static analyser.
-```
+
+```bash
 # Run TSLint
 npm run lint
 ```
 
 ### Run Tests
 The project include the initial setup to run unit tests using `mocha`.
-```
+
+```bash
 # Run Unit Tests
 npm run test
 ```
 
 ### Building the VSTS Task
 The project is setup with npm scripts to build the project. When the build command is run, it creates a `dist` folder with the compiled code ready to be published.
-```
+
+```bash
 # Build the VSTS Task
 npm run build
 ```
