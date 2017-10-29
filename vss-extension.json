@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "<Custom-Task-Id>",
     "name": "<Friendly-Task-Name>",
-    "publisher": "<verified-Publisher-Name>",
+    "publisher": "<Verified-Publisher-Name>",
     "version": "0.0.0",
     "targets": [
         {
