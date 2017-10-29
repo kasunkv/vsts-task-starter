@@ -114,8 +114,14 @@ The following `npm scripts` are created to make it easy to _build_, _test_ and _
 * **build-clean** : Same as above, but this deletes the `dist` directory if it exists before building the project
 * **publish-local** : Publishes the VSTS task to your Visual Studio Test Services instance.
 
+
 > **Note**
 > Before using `publish-local` npm script, you need to have `tfx-cli` installed globally in your system. And the be _logged_ in to your TFS/VSTS instance in order to interact and publish the task to your TFS/VSTS instance. You can follow [Building Custom Visual Studio Team Service Tasks with VSTS DevOps Task SDK](3) article to know how to install `tfx-cli` and how to login to your VSTS instance using a `PAT (Personal Access Token)`.
+
+
+
+
+
 
 
 
