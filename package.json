@@ -4,7 +4,8 @@
   "description": "Starter project for creating Visual Studio Team Services tasks using TypeScript",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "tslint -c tslint.json Tasks\\**\\*.ts"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,9 @@
   "devDependencies": {
     "@types/node": "^8.0.47",
     "@types/q": "^1.0.6",
+    "tslint": "^5.8.0",
+    "tslint-eslint-rules": "^4.1.1",
+    "tslint-microsoft-contrib": "^5.0.1",
     "typescript": "^2.5.3"
   }
 }
