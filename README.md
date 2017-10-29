@@ -59,22 +59,36 @@ The [Build Task Reference Documentation](https://docs.microsoft.com/en-us/vsts/e
 ## Marketplace Graphics
 There are 3 types of graphics used in the VSTS Task. Look at the _Project Structure_ figure to see the location of these files
 
-* **Task Icon** : Image file that must NOT be larger than `32x32` pixels.
-* **Marketplace Icon** : Icon file that is shown on the Marketplace Home page for the task that must be at least `128x128` pixels
-* **Screenshots** : Screenshot/Custom graphic that is shown in the Marketplace Home page for the task. Maximum of 3 images are shown. Can be any size, ideal size is `380x260` pixels.
+* **[Task Icon](https://raw.githubusercontent.com/kasunkv/vsts-task-starter/update-readme/Tasks/CustomTask/icon.png)** : Image file that must NOT be larger than `32x32` pixels.
+* **[Marketplace Icon](https://raw.githubusercontent.com/kasunkv/vsts-task-starter/master/marketplace-icon.png)** : Icon file that is shown on the Marketplace Home page for the task that must be at least `128x128` pixels.
+* **[Screenshots](https://raw.githubusercontent.com/kasunkv/vsts-task-starter/update-readme/screenshots/screenshot-0.png)** : Screenshot/Custom graphic that is shown in the Marketplace Home page for the task. Maximum of 3 images are shown. Can be any size, ideal size is `380x260` pixels.
+
 
 ## Starting Development
 ### Install the npm packages
+The project uses `vsts-task-lib` npm package and few development time dependencies.
 ```
 # Install dependencies
 npm install
+```
 
+### Running Code Analysis
+The project is written in `TypeScript`. It uses `TSLint` static analyser.
+```
 # Run TSLint
 npm run lint
+```
 
+### Run Tests
+The project include the initial setup to run unit tests using `mocha`.
+```
 # Run Unit Tests
 npm run test
+```
 
+### Building the VSTS Task
+The project is setup with npm scripts to build the project. When the build command is run, it creates a `dist` folder with the compiled code ready to be published.
+```
 # Build the VSTS Task
 npm run build
 ```
