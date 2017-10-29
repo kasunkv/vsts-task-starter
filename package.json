@@ -1,0 +1,31 @@
+{
+  "name": "vsts-task-starter",
+  "version": "0.0.0",
+  "description": "Starter project for creating Visual Studio Team Services tasks using TypeScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kasunkv/vsts-task-starter.git"
+  },
+  "keywords": [
+    "vsts",
+    "custom-tasks"
+  ],
+  "author": " <Your_Name_Here>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kasunkv/vsts-task-starter/issues"
+  },
+  "homepage": "https://github.com/kasunkv/vsts-task-starter#readme",
+  "dependencies": {
+    "vsts-task-lib": "^2.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^8.0.47",
+    "@types/q": "^1.0.6",
+    "typescript": "^2.5.3"
+  }
+}

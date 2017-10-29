@@ -1,0 +1,53 @@
+{
+    "$schema": "https://raw.githubusercontent.com/AArnott/vso-agent-tasks/9b41d803a/tasks.schema.json",
+    "id": "<Add-a-new-GUID-Here>",
+    "name": "CustomTask",
+    "friendlyName": "CustomTask",
+    "description": "<The-task=description-here>",
+    "helpMarkDown": "[More Information](https://github.com/kasunkv/vsts-task-starter)",
+    "category": "Utility",
+    "visibility": [
+        "Build",
+        "Release"
+    ],
+    "runsOn": [
+        "Agent",
+        "MachineGroup"
+    ],
+    "author": "<Author-Name-Here>",
+    "version": {
+        "Major": 1,
+        "Minor": 0,
+        "Patch": 0
+    },
+    "demands": [
+        "npm"
+    ],
+    "minimumAgentVersion": "1.92.0",
+    "groups": [
+        {
+            "name": "group1",
+            "displayName": "Group 1",
+            "isExpanded": true
+        }       
+    ],
+    "inputs": [
+        {
+            "name": "input1",
+            "type": "string",
+            "label": "Input 1",
+            "required": true,
+            "defaultValue": "",
+            "groupName": "group1",
+            "helpMarkDown": "<Add-Help-Markdown-Here>"
+        }
+    ],
+    "instanceNameFormat": "Custom Task",
+    "execution": {
+        "Node": {
+            "target": "customTask.js",
+            "argumentFormat": ""
+        }
+    },
+    "messages": { }
+}
